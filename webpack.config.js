@@ -78,12 +78,17 @@ module.exports = {
 
   plugins: [
     new HtmlWebpackPlugin({
+      title: "Product Card",
       template: path.join(__dirname, "public/index.html"),
+      favicon: path.resolve(
+        __dirname,
+        "src/instructions/images/favicon-32x32.png"
+      ),
     }),
     new webpack.ProvidePlugin({
       React: "react",
     }),
-    new MiniCssExtractPlugin(), 
+    new MiniCssExtractPlugin(),
   ],
 
   optimization: {
